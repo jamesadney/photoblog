@@ -1,0 +1,16 @@
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  timeout: 5000
+
+development:
+  <<: *common
+  database: photoblog_dev
+
+test:
+  <<: *common
+  database: photoblog_test
+
+production:
+  <<: *common
+  database: photoblog_prod
