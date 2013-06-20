@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
 
   validates :username, uniqueness: true, presence: true
 
+  validates :username, exclusion: { in: %w(users admin assets),
+    message: "Username '%{value}' is reserved." }
+
   has_many :photos
 
   # Make sure username can be used in the URL path
