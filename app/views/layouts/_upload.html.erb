@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+  <div class="large-2 columns">
+      <%= link_to "Upload", new_user_photo_path(current_user), class: "button" %>
+  </div>
+<% end %>

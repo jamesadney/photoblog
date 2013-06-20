@@ -1,5 +1,10 @@
-<ul>
-  <% @photos.each do |photo| %>
-    <li><%= photo.filename %></li>
+<div class="row">
+  <h1 class="header large-10 columns">Photos by <span class="username"><%= @photos_username %></span></h1>
+  <% if user_signed_in? %>
+  <%= render "layouts/upload" %>
   <% end %>
-</ul>
+</div>
+
+<div class="row">
+  <%= render @photos %>
+</div>

@@ -1,0 +1,9 @@
+<div class="row">
+  <h1 class="header">Upload a new photo.</h1>
+</div>
+<div class="row">
+  <%= form_for [current_user, @photo], html: { multipart: true } do |f| %>
+    <%= f.file_field :image %>
+    <%= f.submit "Upload" %>
+  <% end %>
+</div>

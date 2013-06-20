@@ -1,12 +1,13 @@
 <div class="row">
-  <h1 class="header">Welcome to the home page!</h1>
+  <h1 class="header large-10 columns">Browse recent uploads</h1>
+  <%= render "layouts/upload" %>
 </div>
 
 <div class="row">
-  <div class="large-8 push-4 columns" id="feed">
-    This will be a feed of photos
+  <div class="large-10 push-2 columns" id="feed">
+    <%= render @photos %>
   </div>
-  <ul class="large-4 pull-8 columns">
+  <ul class="large-2 pull-10 columns">
     <%= render @users %>
   </ul>
 
