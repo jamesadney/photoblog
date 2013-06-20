@@ -6,12 +6,12 @@ class UserExistsConstraint
 end
 
 Photoblog::Application.routes.draw do
-  devise_for :users
-
   root to: "home#index"
 
-  get "/:username" => redirect("/%{username}/photos")
+  devise_for :users
+  resources :users, only: [:index]
 
+  get "/:username" => redirect("/%{username}/photos")
   scope ":username", as: "user", constraints: UserExistsConstraint do
     resources :photos
   end
