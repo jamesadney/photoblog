@@ -1,7 +1,20 @@
+# FIXME: Better to catch in router or in controller?
+class UserExistsConstraint
+  def self.matches?(request)
+    User.where(username: request.params[:username]).exists?
+  end
+end
+
 Photoblog::Application.routes.draw do
   devise_for :users
 
   root to: "home#index"
+
+  get "/:username" => redirect("/%{username}/photos")
+
+  scope ":username", as: "user", constraints: UserExistsConstraint do
+    resources :photos
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
