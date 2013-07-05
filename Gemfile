@@ -14,6 +14,7 @@ gem "devise", "~> 3.0.0.rc"
 gem "zurb-foundation", "~> 4.2.2"
 
 gem "carrierwave", "~> 0.8.0"
+gem "fog", "~> 1.12.1"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
