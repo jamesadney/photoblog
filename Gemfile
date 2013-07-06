@@ -16,6 +16,9 @@ gem "zurb-foundation", "~> 4.2.2"
 gem "carrierwave", "~> 0.8.0"
 gem "fog", "~> 1.12.1"
 
+gem "resque", "~> 1.24.1"
+gem "carrierwave_backgrounder", "~> 0.2.1"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
