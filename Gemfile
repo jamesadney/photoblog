@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '4.0.0'
 
 gem 'pg', '~> 0.15.1'
@@ -40,6 +42,10 @@ end
 group :test do
   gem 'launchy'
   gem 'simplecov'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
