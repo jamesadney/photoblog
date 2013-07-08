@@ -242,6 +242,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   meta_request
+  mime-types
   pg (~> 0.15.1)
   pry-debugger
   pry-doc

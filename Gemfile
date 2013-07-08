@@ -17,6 +17,7 @@ gem "zurb-foundation", "~> 4.2.2"
 
 gem "carrierwave", "~> 0.8.0"
 gem "fog", "~> 1.12.1"
+gem "mime-types"
 
 gem "resque", "~> 1.24.1"
 gem "carrierwave_backgrounder", "~> 0.2.1"
