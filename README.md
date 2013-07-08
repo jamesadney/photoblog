@@ -1,5 +1,7 @@
 # PhotoBlog
 
+![Screenshot](http://i.imgur.com/b2zc44z.png)
+
 ## Setup
 
 1. Download and bundle.
