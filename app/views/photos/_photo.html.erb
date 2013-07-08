@@ -1,3 +1,8 @@
 <div class="image-box left small-6 large-3 columns">
-  <%= link_to image_tag(photo.image_url.to_s), photo.image_url.to_s %>
+  <% if photo.image_url.nil? %>
+    <div class="placeholder"></div>
+  <% else %>
+    <%= link_to image_tag(photo.image_url.to_s), photo.image_url.to_s %>
+  <% end %>
+  <p><%= photo.caption %></p>
 </div>
