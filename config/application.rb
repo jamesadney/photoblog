@@ -26,5 +26,7 @@ module Photoblog
     # config.i18n.default_locale = :de
 
     config.assets.initialize_on_precompile = false
+
+    config.time_zone = "Pacific Time (US & Canada)"
   end
 end

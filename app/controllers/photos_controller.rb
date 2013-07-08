@@ -21,7 +21,7 @@ private
 
   def find_photos
     @photos_username = params[:username]
-    @photos = User.find_by_username!(@photos_username).photos
+    @photos = User.find_by_username!(@photos_username).photos.decorate
     rescue ActiveRecord::RecordNotFound
       raise_404
   end

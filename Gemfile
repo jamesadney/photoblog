@@ -23,6 +23,7 @@ gem "resque", "~> 1.24.1"
 gem "carrierwave_backgrounder", "~> 0.2.1"
 
 gem "simple_form", "~> 3.0.0.rc"
+gem 'draper', '~> 1.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
